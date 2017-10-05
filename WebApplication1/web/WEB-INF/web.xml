@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>
+
+  <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>StoreAction</servlet-name>
+        <servlet-class>com.store.StoreAction</servlet-class>
+  </servlet>
+  <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>SalesAction</servlet-name>
+        <servlet-class>com.salesman.SalesAction</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegisterAction</servlet-name>
+    <servlet-class>com.register.RegisterAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginAction</servlet-name>
+    <servlet-class>com.login.LoginAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProductAction</servlet-name>
+    <servlet-class>com.product.ProductAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CProductAction</servlet-name>
+    <servlet-class>com.Cproduct.CProductAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LogoutAction</servlet-name>
+    <servlet-class>com.logout.LogoutAction</servlet-class>
+  </servlet>
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CLoginAction</servlet-name>
+    <servlet-class>com.CLogin.CLoginAction</servlet-class>
+  </servlet>
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OrderAction</servlet-name>
+    <servlet-class>com.Order.OrderAction</servlet-class>
+  </servlet>
+     <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CustomerAction</servlet-name>
+    <servlet-class>com.customer.CustomerAction</servlet-class>
+  </servlet>
+
+
+  <servlet-mapping>
+     <servlet-name>StoreAction</servlet-name>
+     <url-pattern>/servlet/StoreAction</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>SalesAction</servlet-name>
+    <url-pattern>/servlet/SalesAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterAction</servlet-name>
+    <url-pattern>/servlet/RegisterAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginAction</servlet-name>
+    <url-pattern>/servlet/LoginAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProductAction</servlet-name>
+    <url-pattern>/servlet/ProductAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CProductAction</servlet-name>
+    <url-pattern>/servlet/CProductAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogoutAction</servlet-name>
+    <url-pattern>/servlet/LogoutAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CLoginAction</servlet-name>
+    <url-pattern>/servlet/CLoginAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderAction</servlet-name>
+    <url-pattern>/servlet/OrderAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CustomerAction</servlet-name>
+    <url-pattern>/servlet/CustomerAction</url-pattern>
+  </servlet-mapping>
+ 
+  
+  <!--  filter -->
+  
+  <filter>
+  	<filter-name>MyFilter</filter-name>
+  	<filter-class>com.filter.MyFilter</filter-class>
+  </filter>
+ 
+  <filter-mapping>
+  	<filter-name>MyFilter</filter-name>
+  	<!-- /*表示过滤所有页面 ，/main.jsp 表示只过滤main.jsp页面-->
+  	<url-pattern> /main.jsp</url-pattern>   
+  </filter-mapping>
+   <filter-mapping>
+  	<filter-name>MyFilter</filter-name>
+  	<!-- /*表示过滤所有页面 /addProduct.jsp 表示只过滤addProduct.jsp页面-->
+  	<url-pattern>/addProduct.jsp</url-pattern>   
+  </filter-mapping>
+  
+
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
